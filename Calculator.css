@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 726px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.body{
+    height: 480px;
+    width: 30%;
+    border: 2px solid black;
+    border-style: outset;
+    border-radius: 4px;
+    background-color: gray;
+    overflow: hidden;
+   
+}
+.logo{
+    margin: 2px;
+    /* background-color: aliceblue; */
+    width: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+    
+}
+
+.calculater{
+    height: 120px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resule-dis{
+    background-color: rgb(16, 201, 234);
+    color: green;
+    height: 90px;
+    width: 14%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 250px;
+    font-size: 30px;
+    /* padding: 20px; */
+    text-indent: 2px;
+    overflow-x: auto;
+
+}
+.clear-button {
+    margin-top: 517px; /* Adjust margin as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateX(136px);
+    
+}
+.equal-button{
+    margin-top: 517px; /* Adjust margin as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 19%;
+    transform: translateX(510px);
+}
+.display{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    font-size: 55px;
+    flex-direction: row-reverse;
+    /* background-color: yellow; */
+    overflow-x: auto;
+   
+}
+.button{
+    height: 314px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.inbutton{
+    height: 24%;
+    width: 24%;
+    background-color: green;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.line{
+    color: blue;
+    width: 3px;
+    height: 90%;
+    margin: 2px;
+    margin-right: 9px; 
+    background-color: chartreuse;
+    animation-name: lineani;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes lineani {
+    0%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: rgb(243, 139, 12);
+    }
+}
+
+.inbutton{
+    cursor: pointer;
+    transition: 500ms;
+}
+.inbutton:hover{
+    transform: scale(1.1);
+}
+

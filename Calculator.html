@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/018/972/682/original/calculator-3d-application-icon-png.png">
+    <link rel="stylesheet" href="./Calculator.css">
+    <title>Calculeter</title>
+</head>
+
+<body>
+    <div class="main">
+        
+            <div class="resule-dis" id="resule-dis">
+                <h3>result</h3>
+            </div>     
+        <div class="body">
+
+            <header class="logo">
+                <img height="38px" width="36px"
+                    src="https://static.vecteezy.com/system/resources/previews/018/972/682/original/calculator-3d-application-icon-png.png"
+                    alt="logo">
+                <h2 style="margin-left:75px ; background-color: cyan; border-radius: 20px;">Calculeter</h2>
+                <img style="margin-left: 85px;" height="38px" width="36px"
+                    src="https://static.vecteezy.com/system/resources/previews/018/972/682/original/calculator-3d-application-icon-png.png"
+                    alt="logo">
+            </header>
+            <div class="calculater">
+                <div class="display" id="display" onclick="cleardis()">
+                    <hr class="line">
+                    <div class="displa11" style="height: 50%; width: 100%; "></div>
+                    <div class="display2" style="height: 50%; width: 100%;"></div>
+                    <!-- <hr class="line" > -->
+
+                </div>
+            </div>
+            <div class="button" id="button">
+
+
+                <script>
+
+                    let button = document.getElementById("button");
+                    var con = "";
+                    for (let i = 1; i <= 16; i++) {
+
+                        con = con + `<div class="inbutton" id="button${i}" value=""  onclick="onclick1('button${i}')" ></div>`
+                    }
+                    button.innerHTML = con;
+                    var numpad = ["", "1", "2", "3", "*", "4", "5", "6", "/", "7", "8", "9", "-", "0", "00", ".", "+"];
+                    for (let i = 1; i <= 16; i++) {
+                        if (false) {
+                            console.log(document.getElementById(`button${i}`));
+                        }
+                        else {
+                            document.getElementById(`button${i}`).innerHTML = `<h1>${numpad[i]}</h1>`
+                            var val1 = document.getElementById(`button${i}`).value;
+                            val1 = numpad[i];
+                            document.getElementById(`button${i}`).value = val1;
+
+                        }
+
+                    }
+                    var stored = "";
+                    var s2 = "";
+                    var display1 = document.getElementById("display");
+                    function onclick1(id1) {
+                        stored = document.getElementById(id1).value;
+                        s2 = s2 + stored;
+                        display1.innerHTML = s2;
+                        document.getElementById("display").style.fontSize = "55px";
+
+
+                        console.log(s2);
+                        doCalculation();
+                    }
+                    function updateDisplay() {
+                        display1.innerHTML = s2;
+
+                    }
+
+                    function cleardis() {
+                        display1.innerHTML = "";
+                        s2 = "";
+                        doCalculation();
+                    }
+
+                    function doCalculation() {
+
+                        var result = "= " + eval(s2);
+                        document.getElementById("resule-dis").innerHTML = result;
+                        console.log("= " + result);
+                        console.log(s2);
+                        console.log("hii do smok");
+
+                    }
+                    function onClickButton(value) {
+                        
+                       // doCalculation();
+                        if (value === "=") {
+                            // document.getElementById("resule-dis").innerHTML = eval(s2);
+                            var result = "= " + eval(s2);
+
+                            document.getElementById("resule-dis").innerHTML = result;
+                            console.log(s2);
+                            console.log("= " + result);
+
+                        }
+                        
+                        else if (value === "C" || value === "c") {
+                            cleardis();
+                        }
+                        else {
+                            s2 += value;
+                            updateDisplay();
+                            return;
+                        }
+                        
+
+                    }
+                    function backSpace(){
+                        console.log(s2);
+                        var s3=int(s2)/10;
+                        console.log(s3);
+                    }
+
+                    document.addEventListener("keydown", function (event) {
+                        // Get the key that was pressed
+                        var key = event.key;
+                        // If the key is a valid button value, perform the same action as clicking the button
+                        if (numpad.includes(key) || key === "=" || key === "C" || key === "c") {
+                            onClickButton(key);
+                            console.log(key);
+                            doCalculation();
+                        }
+                    });
+
+
+                </script>
+                
+            </div>
+            
+        </div>
+        <button class="clear-button" onclick="cleardis()">Clear Display</button>
+        <!-- <button class="equal-button" onclick="doCalculation()"><b>=</b></button> -->
+
+    </div>
+
+</body>
+
+</html>
