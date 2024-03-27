@@ -12,7 +12,7 @@ This is a simple calculator web application created using HTML, CSS, and JavaScr
 
 - Addition, subtraction, multiplication, and division operations
 - Clear button to remove the entered digit
-- Reset button to clear the entire calculation
+- BackSpace button to remove the last digit of calculator.
 - Keyboard support for entering digits and performing operations
 
 ### Technologies Used
