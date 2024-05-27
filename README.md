@@ -1,12 +1,12 @@
 # calculator
-Simple calculator web application allowing basic arithmetic operations with responsive design and keyboard support.
+Simple calculator web application allowing arithmetic operations with responsive design and keyboard support.
 
 
 Sure, here's a sample description and README file for your calculator project:
 
 ### Description
 
-This is a simple calculator web application created using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator provides a user-friendly interface with buttons for each digit, arithmetic operation, and functionality to clear the input or reset the calculator.
+This is a  calculator web application created using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator provides a user-friendly interface with buttons for each digit, arithmetic operation, and functionality to clear the input or reset the calculator.
 
 ### Features
 
